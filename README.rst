@@ -29,14 +29,14 @@ Requisitos previos
 
  - Python 2.7 y bibliotecas de desarrollo
 
-Crear un archivo ~/.buildout/default.cfg con lo siguiente:
+**Configurar Buildout**
+
+Es ideal aplicar estas configuraciones Buildout en usuario local para compartir localmente 
+los paquetes descargados con otros proyectos Buildout, ejecutando el siguiente comando:
 
 .. code-block:: console
+  $ mkdir -p $HOME/.buildout/{downloads,eggs,extends} && echo $HOME $HOME $HOME | awk '{ printf( "[buildout]\neggs-directory = %s/.buildout/eggs\ndownload-cache = %s/.buildout/downloads\nextends-cache = %s/.buildout/extends\nabi-tag-eggs = true\n", $1, $2, $3 ) }' >> ~/.buildout/default.cfg
 
-  [buildout]
-  download-cache = ~/.buildout/downloads
-  eggs-directory = ~/.buildout/eggs
-  extends-cache = ~/.buildout/extends
 
 - ``download-cache``: Directorio donde se almacenan los sources de los paquetes
   descargados con los que se construyen los paquetes python (eggs).
