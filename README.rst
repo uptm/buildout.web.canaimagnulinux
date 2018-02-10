@@ -38,14 +38,14 @@ Crear un archivo ~/.buildout/default.cfg con lo siguiente:
   eggs-directory = ~/.buildout/eggs
   extends-cache = ~/.buildout/extends
 
- - ``download-cache``: Directorio donde se almacenan los sources de los paquetes
-   descargados con los que se construyen los paquetes python (eggs).
+- ``download-cache``: Directorio donde se almacenan los sources de los paquetes
+  descargados con los que se construyen los paquetes python (eggs).
 
- - ``eggs-directory``: Directorio donde se almacenan los paquetes python generados.
+- ``eggs-directory``: Directorio donde se almacenan los paquetes python generados.
 
- - ``extends-cache``: Directorio donde se almacenan archivos de configuración (.cfg)
-   que son descargados desde la red, generalmente por una clausula ``extends`` y que
-   son utilizados cuando el buildout se ejecuta sin conexión (offline mode)
+- ``extends-cache``: Directorio donde se almacenan archivos de configuración (.cfg)
+  que son descargados desde la red, generalmente por una clausula ``extends`` y que
+  son utilizados cuando el buildout se ejecuta sin conexión (offline mode)
 
 
 Descargar el buildout
@@ -123,7 +123,7 @@ buildout:
 
 .. code-block:: console
 
-  $ rm -rf ~/canaimagnulinux/src/xxx.yyy
+  $ rm -rf ~/uptm/src/xxx.yyy
 
 Reemplace "xxx.yyy" por el nombre del paquete que se muestra en el mensaje de
 error.
@@ -154,7 +154,7 @@ Acceder al usuario, clonar el repositorio y correr el bootstrap:
 
     $ sudo -u plone -s -H
 
-    $ git clone git@github.com/canaimagnulinux/uptm.website.git
+    $ git clone git@github.com/uptm/uptm.website.git
     Initialized empty Git repository in /srv/plone/uptm.website/.git/
     Password:
 
@@ -228,7 +228,7 @@ Colaboraciones impresionantes
 
 
 Para una lista actualizada de todo los colaboradores visite:
-https://github.com/canaimagnulinux/uptm.website/contributors
+https://github.com/uptm/uptm.website/contributors
 
 .. _sitio Web de UPTM: http://www.uptm.edu.ve/
 .. _repositorio UPTM: https://github.com/uptm/uptm.website
