@@ -1,16 +1,16 @@
 .. -*- coding: utf-8 -*-
 
-===========================
-Portal de Canaima GNU/Linux
-===========================
+===============
+Portal del UPTM
+===============
 
 :Framework: `Plone 4.3.4 <http://plone.org>`_
-:Bug tracker: https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux/issues
-:Source: https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux
-:Documentation: https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux/wiki/Home
+:Bug tracker: https://github.com/uptm/uptm.website/issues
+:Source: https://github.com/uptm/uptm.website
+:Documentation: https://github.com/uptm/uptm.website/wiki/Home
 
 Este paquete instala una instancia de Plone con todos los componentes
-necesarios para construir el sitio web de Canaima GNU/Linux
+necesarios para construir el sitio web del UPTM
 
 Se proporcionan configuraciones para los siguientes entornos:
 
@@ -57,7 +57,7 @@ lineas de comando:
 .. code-block:: console
 
   $ cd ~
-  $ git clone https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux.git
+  $ git clone https://github.com/uptm/uptm.website.git
 
 
 Puede utilizar un nombre de carpeta diferente si así lo desea.
@@ -70,7 +70,7 @@ desarrollo, ejecute las siguientes instrucciones en lineas de comando:
 
 .. code-block:: console
 
-  $ cd ~/buildout.web.canaimagnulinux
+  $ cd ~/uptm.website
   $ python bootstrap.py
   $ ./bin/buildout
 
@@ -80,7 +80,7 @@ Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
   $ ./bin/instance fg
 
-Puede acceder al sitio a través de la dirección http://127.0.0.1:8080/
+Puede acceder al sitio a través de la dirección http://localhost:8080/
 
 
 Entorno de pruebas (staging)
@@ -90,7 +90,7 @@ Ingresar al directorio donde se obtuvo la copia del buildout:
 
 .. code-block:: console
 
-  $ cd ~/buildout.web.canaimagnulinux
+  $ cd ~/uptm.website
 
 Una vez realizado ese paso, debe modificar el archivo **buildout.cfg**
 con el siguiente comando ::
@@ -115,7 +115,7 @@ Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
   $ ./bin/instance fg
 
-Puede acceder al sitio a través de la dirección http://127.0.0.1:8080/
+Puede acceder al sitio a través de la dirección http://localhost:8080/
 
 En caso de encontrar errores del tipo **"Can't update package 'xxx.yyy' because
 its URL doesn't match."** utilice el siguiente comando y ejecute nuevamente el
@@ -154,11 +154,11 @@ Acceder al usuario, clonar el repositorio y correr el bootstrap:
 
     $ sudo -u plone -s -H
 
-    $ git clone git@github.com/canaimagnulinux/buildout.web.canaimagnulinux.git
-    Initialized empty Git repository in /srv/plone/buildout.web.canaimagnulinux/.git/
+    $ git clone git@github.com/canaimagnulinux/uptm.website.git
+    Initialized empty Git repository in /srv/plone/uptm.website/.git/
     Password:
 
-    $ cd buildout.web.canaimagnulinux
+    $ cd uptm.website
 
 Generar el buildout y lo ejecutarlo con el perfil de producción según sea
 una instancia.
@@ -199,19 +199,19 @@ necesarios para utilizar sudo.
 Descargas
 =========
 
-Usted puede encontrar la versión de desarrollo del paquete ``buildout.web.canaimagnulinux``
-en el `repositorio Canaima GNU/Linux`_ en Github.com.
+Usted puede encontrar la versión de desarrollo del paquete ``uptm.website``
+en el `repositorio UPTM`_ en Github.com.
 
 Sobre la calidad
 ================
 
-.. image:: https://d2weczhvl823v0.cloudfront.net/CanaimaGNULinux/buildout.web.canaimagnulinux/trend.png
+.. image:: https://d2weczhvl823v0.cloudfront.net/uptm/uptm.website/trend.png
    :alt: Bitdeli badge
    :target: https://bitdeli.com/free
 
-.. image:: https://travis-ci.org/CanaimaGNULinux/buildout.web.canaimagnulinux.svg?branch=master
+.. image:: https://travis-ci.org/uptm/uptm.website.svg?branch=master
     :alt: Travis-CI badge
-    :target: https://travis-ci.org/CanaimaGNULinux/buildout.web.canaimagnulinux
+    :target: https://travis-ci.org/uptm/uptm.website
 
 
 ¿Tienes una idea?, ¿Encontraste un error? Háganos saber mediante la `apertura de un ticket de soporte`_.
@@ -228,8 +228,8 @@ Colaboraciones impresionantes
 
 
 Para una lista actualizada de todo los colaboradores visite:
-https://github.com/canaimagnulinux/buildout.web.canaimagnulinux/contributors
+https://github.com/canaimagnulinux/uptm.website/contributors
 
-.. _sitio Web de Canaima GNU/Linux: http://canaima.softwarelibre.gob.ve/
-.. _repositorio Canaima GNU/Linux: https://github.com/canaimagnulinux/buildout.web.canaimagnulinux
-.. _apertura de un ticket de soporte: https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux/issues
+.. _sitio Web de UPTM: http://www.uptm.edu.ve/
+.. _repositorio UPTM: https://github.com/uptm/uptm.website
+.. _apertura de un ticket de soporte: https://github.com/uptm/uptm.website/issues
