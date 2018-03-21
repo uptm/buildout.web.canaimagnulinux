@@ -72,8 +72,10 @@ desarrollo, ejecute las siguientes instrucciones en lineas de comando:
 .. code-block:: console
 
   $ cd ~/uptm.website
+  $ virtualenv .
+  $ source ./bin/activate
   $ python bootstrap.py
-  $ ./bin/buildout
+  $ ./bin/buildout -t 120
 
 Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
