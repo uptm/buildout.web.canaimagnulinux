@@ -56,7 +56,7 @@ genera un archivo mediante el proceso de construcción hecho por zc.buildout.
 
 Una muestra del archivo de configuración de Nginx es el siguiente:
 
-.. literalinclude:: ../templates/nginx-vhost.conf.in
+.. literalinclude:: ../../../templates/nginx-vhost.conf.in
    :encoding: utf-8
 
 En la configuración se define las variables de Nginx para generar el archivo 
@@ -96,6 +96,6 @@ Referencias
 -   `Ejecutando Zope y Plone detrás de un Servidor Web`_.
 
 .. _nginx: http://nginx.org/
-.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.org/en/latest/buildout/plone-esquema-alta-disponibilidad.html
-.. _Ejecutando Zope y Plone detrás de un Servidor Web: http://plone-spanish-docs.readthedocs.org/en/latest/zope/zope-plone-detras-servidor-web.html
-.. _Virtual host: http://plone-spanish-docs.readthedocs.org/en/latest/zope/zope-plone-detras-servidor-web.html#terminologia-general
+.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.io/es/latest/buildout/plone_esquema_alta_disponibilidad.html
+.. _Ejecutando Zope y Plone detrás de un Servidor Web: http://plone-spanish-docs.readthedocs.io/es/latest/zope/web/zope_plone_detras_servidor_web.html
+.. _Virtual host: http://plone-spanish-docs.readthedocs.io/es/latest/zope/web/zope_plone_detras_servidor_web.html#terminologia-general

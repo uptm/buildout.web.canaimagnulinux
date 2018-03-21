@@ -1,5 +1,5 @@
 # This is the default haproxy load balancing configuration. 
-# It uses will load balance four ZEO clients.
+# It uses will load balance two ZEO clients.
 # Note that haproxy.conf file is generated from haproxy.conf.in template file.
 
 global

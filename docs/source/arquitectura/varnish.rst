@@ -100,17 +100,17 @@ instalaci처n de buildout y funciona de esta manera:
   # Zope, Varnish and Nginx URLs download versions to be used
   [downloads]
   pcre = http://download.sf.net/project/pcre/pcre/8.31/pcre-8.31.tar.gz
-  varnish = http://dist.jarn.com/public/varnish-2.1.5.tar.gz
+  varnish = https://varnish-cache.org/_downloads/varnish-2.1.5.tgz
   
   # A dependency for build Varnish
-  # For options see http://pypi.python.org/pypi/hexagonit.recipe.cmmi
+  # For options see https://pypi.python.org/pypi/hexagonit.recipe.cmmi
   [pcre]
   recipe = hexagonit.recipe.cmmi
   url = ${downloads:pcre}
   keep-compile-dir = true
   
   # Varnish, acting as a reverse lookup caching proxy
-  # For options see http://pypi.python.org/pypi/hexagonit.recipe.cmmi
+  # For options see https://pypi.python.org/pypi/hexagonit.recipe.cmmi
   [varnish-build]
   recipe = hexagonit.recipe.cmmi
   url = ${downloads:varnish}
@@ -118,7 +118,7 @@ instalaci처n de buildout y funciona de esta manera:
     --with-pcre=${pcre:location}/../pcre__compile__/pcre-8.31
   
   # This recipe help to install Varnish.
-  # For options see http://pypi.python.org/pypi/plone.recipe.varnish
+  # For options see https://pypi.python.org/pypi/plone.recipe.varnish
   [varnish]
   recipe = plone.recipe.varnish
   daemon = ${varnish-build:location}/sbin/varnishd
@@ -141,7 +141,7 @@ hecho por zc.buildout.
       varnish-config
       
   # This recipe generates Varnish configurations
-  # For options see http://pypi.python.org/pypi/collective.recipe.template
+  # For options see https://pypi.python.org/pypi/collective.recipe.template
   [varnish-config]
   recipe = collective.recipe.template
   input = ${buildout:directory}/templates/varnish.vcl.in
@@ -149,7 +149,7 @@ hecho por zc.buildout.
 
 Una muestra del archivo de configuraci처n de Varnish es el siguiente:
 
-.. literalinclude:: ../templates/varnish.vcl.in
+.. literalinclude:: ../../../templates/varnish.vcl.in
    :encoding: utf-8
 
 En proceso de instalaci처n y configuraci처n se requieren algunas variables de necesarias 
@@ -204,7 +204,7 @@ en el directorio ``bin/`` de su proyecto buildout, con la siguiente configuraci�
   parts =
       varnishlog
   # This recipe generates a bash script for varnishlog command
-  # For options see http://pypi.python.org/pypi/collective.recipe.template
+  # For options see https://pypi.python.org/pypi/collective.recipe.template
   [varnishlog]
   recipe = collective.recipe.template
   input = inline:
@@ -228,11 +228,11 @@ Referencias
 
 -   Referencia de la documentaci처n de `Varnish 2.1`_
 
-.. _Servidor Proxy: http://es.wikipedia.org/wiki/Proxy#Servidor_Proxy
-.. _proxy HTTP: http://es.wikipedia.org/wiki/Proxy#Servidor_HTTP
-.. _HTTPs: http://es.wikipedia.org/wiki/Proxy#Servidor_HTTPS
-.. _Varnish: https://www.varnish-cache.org/
+.. _Servidor Proxy: https://es.wikipedia.org/wiki/Proxy#Servidor_Proxy
+.. _proxy HTTP: https://es.wikipedia.org/wiki/Proxy#Servidor_HTTP
+.. _HTTPs: https://es.wikipedia.org/wiki/Proxy#Servidor_HTTPS
+.. _Varnish: https://varnish-cache.org/
 .. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
-.. _Proxy: http://es.wikipedia.org/wiki/Proxy
+.. _Proxy: https://es.wikipedia.org/wiki/Proxy
 .. _Varnish, Reverse Proxy y ESI: http://nestor.profesional.co.cr/es/book/varnish-reverse-proxy-y-esi
-.. _Varnish 2.1: https://www.varnish-cache.org/docs/2.1/
+.. _Varnish 2.1: https://varnish-cache.org/docs/2.1/

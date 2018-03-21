@@ -107,8 +107,8 @@ server {
     # default root directory on debian based system.
     root /var/www/nginx-default;
     location / {
-            #proxy_pass  http://varnish/VirtualHostBase/http/canaima.softwarelibre.gob.ve:80/cms/VirtualHostRoot/;
-            #rewrite ^/(.*)$ /VirtualHostBase/http/canaima.softwarelibre.gob.ve:80/cms/VirtualHostRoot/$1 break;
+            #proxy_pass  http://varnish/VirtualHostBase/http/preview.uptm.edu.ve:80/Plone/VirtualHostRoot/;
+            #rewrite ^/(.*)$ /VirtualHostBase/http/preview.uptm.edu.ve:80/Plone/VirtualHostRoot/$1 break;
             rewrite ^/(.*)$ /VirtualHostBase/http/${site-settings:domain-name-production}:80/${site-settings:site-id}/VirtualHostRoot/$1 break;
             proxy_read_timeout 3601;
             proxy_connect_timeout 3601;

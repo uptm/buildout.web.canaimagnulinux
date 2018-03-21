@@ -125,10 +125,10 @@ instalación de buildout y funciona de esta manera:
 
     # Zope, Varnish and Nginx URLs download versions to be used
     [downloads]
-    haproxy = http://dist.jarn.com/public/haproxy-1.4.18.zip
+    haproxy = http://haproxy.1wt.eu/download/1.4/src/haproxy-1.4.18.tar.gz
     
     # HAProxy, used as a load haproxy over the four Zeo clients
-    # For options see http://pypi.python.org/pypi/plone.recipe.haproxy
+    # For options see https://pypi.python.org/pypi/plone.recipe.haproxy
     [haproxy-build]
     recipe = plone.recipe.haproxy
     url = ${downloads:haproxy}
@@ -153,7 +153,7 @@ la cual genera un archivo mediante el proceso de construcción hecho por zc.buil
 
 Una muestra del archivo de configuración de ``HAProxy`` es el siguiente:
 
-.. literalinclude:: ../templates/haproxy.conf.in
+.. literalinclude:: ../../../templates/haproxy.conf.in
    :encoding: utf-8
 
 En proceso de instalación y configuración se requieren algunas variables de necesarias 
@@ -222,11 +222,11 @@ Referencias
 
 -   `Sesiones en el balance de carga con HAProxy`_.
 
-.. _HAProxy: http://haproxy.1wt.eu/
+.. _HAProxy: http://www.haproxy.org
 .. _Pound: http://www.apsis.ch/pound/
 .. _Nginx: http://nginx.org/
 .. _Lighttpd: http://www.lighttpd.net/
 .. _Apache: http://httpd.apache.org/
 .. _zc.buildout: http://coactivate.org/projects/ploneve/replicacion-de-proyectos-python
-.. _Balance de carga con HAProxy: http://www.maestrosdelweb.com/editorial/balance-de-carga-haproxy/
-.. _Sesiones en el balance de carga con HAProxy: http://www.maestrosdelweb.com/editorial/sesiones-en-el-balance-de-carga-con-haproxy/
+.. _Balance de carga con HAProxy: http://www.maestrosdelweb.com/balance-de-carga-haproxy/
+.. _Sesiones en el balance de carga con HAProxy: http://www.maestrosdelweb.com/sesiones-en-el-balance-de-carga-con-haproxy/
