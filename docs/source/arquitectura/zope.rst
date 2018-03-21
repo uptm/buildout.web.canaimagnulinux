@@ -108,7 +108,7 @@ de cluster para que puedan atender las diversas peticiones de clientes Zeo que e
 la aplicación Plone. 
 
 En este esquema de publicación se instalara `Zope2`_ en modo **Zeo** y así se define 
-en el archivo ``plone-4.3.4.cfg`` de esta forma:
+en el archivo ``plone-4.3-latest.cfg`` de esta forma:
 
 .. code-block:: cfg
 
@@ -178,7 +178,7 @@ siguientes direcciones:
   cuando se requiere por defecto esta apagada. Se ejecuta bajo el puerto **8008**, en la dirección 
   URL http://SU_DIRECCION_IP:8008/
 
-En el archivo ``plone-4.3.4.cfg`` se define la parte mas importante aquí la sección llamada 
+En el archivo ``plone-4.3-latest.cfg`` se define la parte mas importante aquí la sección llamada 
 ``[client_base]``, que representa una definición de molde que contendrá valores de configuración 
 que serán utilizados por los dos (02) clientes Zeo. Siempre se recomienda utilizar variables 
 para la definición de *hosts* y *puertos*, de tal forma que puedan configurarse en una sección 

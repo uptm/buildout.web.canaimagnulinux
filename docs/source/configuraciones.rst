@@ -24,20 +24,15 @@ obtenidas tras la descarga previa realizada en la sección llamada
    ``buildout.d/base.cfg``
       Esta configuración zc.buildout define las extensiones básicas 
       para la construcción del proyecto, además de la inclusión del 
-      perfil de instalación básico de Plone 4.3.4.
+      perfil de instalación básico de Plone 4.3.15.
 
    ``buildout.d/base-versions.cfg``
       Esta configuración zc.buildout se extiende de la configuración 
       ``base.cfg``, la cual define el conjunto de versiones de paquetes 
       a usar para la construcción.
 
-   ``buildout.d/plone-4.3.4.cfg``
-      Esta configuración zc.buildout define como construir un Plone 4.3.4.
-
-   ``buildout.d/plone-4.3.4-versions.cfg``
-      Esta configuración zc.buildout se extiende de la configuración 
-      ``plone-4.3.4.cfg``, la cual define el conjunto de versiones de 
-      paquetes a usar para la construcción.
+   ``buildout.d/plone-4.3-latest.cfg``
+      Esta configuración zc.buildout define como construir un Plone 4.3.15.
 
    ``buildout.d/hotfix.cfg``
       Esta configuración zc.buildout define los paquetes y las versiones 

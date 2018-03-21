@@ -150,8 +150,8 @@ los cuales se describen a continuación:
 
     ``bin/instance``
         Este script fue generado por la sección llamada .instance. dentro del perfil de instalación ``production.cfg``, 
-        usando la receta ``plone.recipe.zope2instance``. Esta se usa de la base de la instalación desde la receta Plone 4.3.4
-        en el perfil ``plone-4.3.4.cfg``.
+        usando la receta ``plone.recipe.zope2instance``. Esta se usa de la base de la instalación desde la receta Plone 4.3.15
+        en el perfil ``plone-4.3-latest.cfg``.
 
         En el perfil ``production.cfg`` sirve como plantilla de los :ref:`clientes Zeo <clientes_zeo>`.
 
