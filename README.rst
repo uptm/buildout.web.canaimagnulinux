@@ -4,7 +4,7 @@
 Portal del UPTM
 ===============
 
-:Framework: `Plone 4.3.4 <http://plone.org>`_
+:Framework: `Plone 4.3.15 <http://plone.org>`_
 :Bug tracker: https://github.com/uptm/uptm.website/issues
 :Source: https://github.com/uptm/uptm.website
 :Documentation: https://github.com/uptm/uptm.website/wiki/Home
