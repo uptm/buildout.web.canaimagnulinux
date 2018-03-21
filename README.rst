@@ -59,9 +59,7 @@ ejecute las siguientes instrucciones en lineas de comando:
   $ cp ./templates/site-settings.cfg.ini ./buildout.d/site-settings.cfg
 
 
-Edite el archivo ``./buildout.cfg`` generado y adaptelo como lo siguiente:
-
-::
+Edite el archivo ``./buildout.cfg`` generado y este archivo debería lucir así::
 
   [buildout]
   extends = buildout.d/development.cfg
