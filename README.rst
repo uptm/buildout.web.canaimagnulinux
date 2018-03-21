@@ -207,10 +207,10 @@ en el `repositorio UPTM`_ en Github.com.
 
 Sobre la calidad
 ================
-
-.. image:: https://d2weczhvl823v0.cloudfront.net/uptm/uptm.website/trend.png
-   :alt: Bitdeli badge
-   :target: https://bitdeli.com/free
+..
+  .. image:: https://d2weczhvl823v0.cloudfront.net/uptm/uptm.website/trend.png
+     :alt: Bitdeli badge
+     :target: https://bitdeli.com/free
 
 .. image:: https://travis-ci.org/uptm/uptm.website.svg?branch=master
     :alt: Travis-CI badge
