@@ -35,9 +35,12 @@ lib/
 local/
 parts/
 src/
+scripts/haproxy_backend
+scripts/nginx_memory
 var/
 
-# buildout.cfg
+# zc.buildout
+#buildout.cfg
 buildout.d/site-settings.cfg
 pip-selfcheck.json
 
