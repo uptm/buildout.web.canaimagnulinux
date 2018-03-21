@@ -40,7 +40,7 @@ scripts/nginx_memory
 var/
 
 # zc.buildout
-#buildout.cfg
+buildout.cfg
 buildout.d/site-settings.cfg
 pip-selfcheck.json
 

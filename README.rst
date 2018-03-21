@@ -29,8 +29,8 @@ Para obtener una copia del proyecto en Git, ejecute los siguientes comando:
 
 .. code-block:: console
 
-  $ cd ~
-  $ git clone https://github.com/uptm/uptm.website.git
+    $ cd ~
+    $ git clone https://github.com/uptm/uptm.website.git
 
 
 Instalación
@@ -54,45 +54,63 @@ ejecute las siguientes instrucciones en lineas de comando:
 
 .. code-block:: console
 
-  $ cd ~/uptm.website
-  $ cp ./templates/buildout.cfg.ini ./buildout.cfg
-  $ cp ./templates/site-settings.cfg.ini ./buildout.d/site-settings.cfg
+    $ cd ~/uptm.website
+    $ make generate-files
+
+..
+  .. code-block:: console
+
+    $ cp ./templates/buildout.cfg.ini ./buildout.cfg
+    $ cp ./templates/site-settings.cfg.ini ./buildout.d/site-settings.cfg
 
 
-Edite el archivo ``./buildout.cfg`` generado y este archivo debería lucir así::
+  Edite el archivo ``./buildout.cfg`` generado y este archivo debería lucir así::
 
-  [buildout]
-  extends = buildout.d/development.cfg
-  #extends = buildout.d/staging.cfg
-  #extends = buildout.d/production.cfg
+    [buildout]
+    extends = buildout.d/development.cfg
+    #extends = buildout.d/staging.cfg
+    #extends = buildout.d/production.cfg
 
-**NOTA:** Guarde el cambio realizado, de esta forma, le indica a Buildout 
-que importe las configuraciones del entorno de trabajo de desarrollo 
-"development".
+  **NOTA:** Guarde el cambio realizado, de esta forma, le indica a Buildout 
+  que importe las configuraciones del entorno de trabajo de desarrollo 
+  "development".
 
 
-Edite el archivo ``./buildout.d/site-settings.cfg`` generado a sus necesidades
+Archivo site-settings.cfg
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Este archivo contiene variables globales de configuraciones de su proyecto,
+usted **DEBE** actualizar sus valores, para eso edite el archivo 
+``./buildout.d/site-settings.cfg`` generado a sus necesidades.
 
 **NOTA:** Guarde el cambio realizado, de esta forma, le indica a Buildout 
 que importe las variables de las configuraciones del de los datos propios 
 del sitio web.
 
 
+Construir buildout
++++++++++++++++++++
+
 Para **construir** una copia de este proyecto en entornos de
 desarrollo, ejecute las siguientes instrucciones en lineas de comando:
 
+..
+  .. code-block:: console
+
+    $ virtualenv .
+    $ source ./bin/activate
+    $ python bootstrap.py
+    $ ./bin/buildout -t 120
+
 .. code-block:: console
 
-  $ virtualenv .
-  $ source ./bin/activate
-  $ python bootstrap.py
-  $ ./bin/buildout -t 120
+  $ make devel
 
 Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
 .. code-block:: console
 
-  $ ./bin/instance fg
+  $ ./bin/zeoserver fg
+  $ ./bin/client1 fg
 
 Puede acceder al sitio a través de la dirección http://localhost:8080/
 
@@ -106,28 +124,36 @@ Ingresar al directorio donde se obtuvo la copia del buildout:
 
   $ cd ~/uptm.website
 
-Una vez realizado ese paso, debe modificar el archivo **buildout.cfg**
-con el siguiente comando ::
+..
+  Una vez realizado ese paso, debe modificar el archivo **buildout.cfg**
+  con el siguiente comando ::
 
-  $ vim buildout.cfg
-  
-Y este archivo debería lucir así::
-  
-  [buildout]
-  #extends = buildout.d/development.cfg
-  extends = buildout.d/staging.cfg
-  #extends = buildout.d/production.cfg
-  
-Luego inicie la construcción con el siguiente comando ::
-  
-  $ python bootstrap.py
-  $ ./bin/buildout -vvvvvvN
+    $ vim buildout.cfg
+    
+  Y este archivo debería lucir así::
+    
+    [buildout]
+    #extends = buildout.d/development.cfg
+    extends = buildout.d/staging.cfg
+    #extends = buildout.d/production.cfg
+    
+  Luego inicie la construcción con el siguiente comando ::
+    
+    $ python bootstrap.py
+    $ ./bin/buildout -vvvvvvN
+
+Luego inicie la construcción con el siguiente comando :
+
+.. code-block:: console
+
+    $ make buildout-cfg-stag
 
 Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
 .. code-block:: console
 
-  $ ./bin/instance fg
+  $ ./bin/zeoserver fg
+  $ ./bin/client1 fg
 
 Puede acceder al sitio a través de la dirección http://localhost:8080/
 
@@ -159,32 +185,35 @@ Acceder al usuario, clonar el repositorio y correr el bootstrap:
 .. code-block:: console
 
     $ sudo -u plone -s -H
-
-    $ git clone git@github.com/uptm/uptm.website.git
+    $ git clone https://github.com/uptm/uptm.website.git
     Initialized empty Git repository in /srv/plone/uptm.website/.git/
     Password:
-
     $ cd uptm.website
 
 Generar el buildout y lo ejecutarlo con el perfil de producción según sea
 una instancia.
 
-Una vez realizado ese paso, debe modificar el archivo **buildout.cfg**
-con el siguiente comando ::
+.. code-block:: console
 
-  $ vim buildout.cfg
-  
-Y este archivo debería lucir así::
-  
-  [buildout]
-  #extends = buildout.d/development.cfg
-  #extends = buildout.d/staging.cfg
-  extends = buildout.d/production.cfg
-  
-Luego inicie la construcción con el siguiente comando ::
-  
-  $ python bootstrap.py
-  $ ./bin/buildout -vvvvvvN
+    $ make prod
+
+..
+  Una vez realizado ese paso, debe modificar el archivo **buildout.cfg**
+  con el siguiente comando ::
+
+    $ vim buildout.cfg
+    
+  Y este archivo debería lucir así::
+    
+    [buildout]
+    #extends = buildout.d/development.cfg
+    #extends = buildout.d/staging.cfg
+    extends = buildout.d/production.cfg
+    
+  Luego inicie la construcción con el siguiente comando ::
+    
+    $ python bootstrap.py
+    $ ./bin/buildout -vvvvvvN
 
 Iniciar las instancias manualmente.
 
