@@ -12,48 +12,20 @@ Portal del UPTM
 Este paquete instala una instancia de Plone con todos los componentes
 necesarios para construir el sitio web del UPTM
 
-Se proporcionan configuraciones para los siguientes entornos:
-
- - Desarrollo
- - Pruebas
- - Producción
-
-Instalación
-===========
-
-Entorno de desarrollo
-=====================
 
 Requisitos previos
-------------------
+==================
 
  - Python 2.7 y bibliotecas de desarrollo
 
-**Configurar Buildout**
 
-Es ideal aplicar estas configuraciones Buildout en usuario local para compartir localmente 
-los paquetes descargados con otros proyectos Buildout, ejecutando el siguiente comando:
+Descargar código
+================
 
-.. code-block::
+Usted puede encontrar la versión de desarrollo del paquete ``uptm.website``
+en el `repositorio UPTM`_ en Github.com.
 
-  $ mkdir -p $HOME/.buildout/{downloads,eggs,extends} && echo $HOME $HOME $HOME | awk '{ printf( "[buildout]\neggs-directory = %s/.buildout/eggs\ndownload-cache = %s/.buildout/downloads\nextends-cache = %s/.buildout/extends\nabi-tag-eggs = true\n", $1, $2, $3 ) }' >> ~/.buildout/default.cfg
-
-
-- ``download-cache``: Directorio donde se almacenan los sources de los paquetes
-  descargados con los que se construyen los paquetes python (eggs).
-
-- ``eggs-directory``: Directorio donde se almacenan los paquetes python generados.
-
-- ``extends-cache``: Directorio donde se almacenan archivos de configuración (.cfg)
-  que son descargados desde la red, generalmente por una clausula ``extends`` y que
-  son utilizados cuando el buildout se ejecuta sin conexión (offline mode)
-
-
-Descargar el buildout
----------------------
-
-Para obtener una copia de este proyecto ejecute las siguientes instrucciones en
-lineas de comando:
+Para obtener una copia del proyecto en Git, ejecute los siguientes comando:
 
 .. code-block:: console
 
@@ -61,17 +33,58 @@ lineas de comando:
   $ git clone https://github.com/uptm/uptm.website.git
 
 
-Puede utilizar un nombre de carpeta diferente si así lo desea.
+Instalación
+===========
+
+Se proporcionan configuraciones para los siguientes entornos:
+
+ - Desarrollo (Development)
+ - Pruebas (Staging)
+ - Producción (Production)
+
+
+Entorno de Desarrollo
+---------------------
 
 Generar el buildout
--------------------
+++++++++++++++++++++
 
-Para inicializar y construir una copia de este proyecto en entornos de
-desarrollo, ejecute las siguientes instrucciones en lineas de comando:
+Para **inicializar** una copia de este proyecto en entornos de desarrollo, 
+ejecute las siguientes instrucciones en lineas de comando:
 
 .. code-block:: console
 
   $ cd ~/uptm.website
+  $ cp ./templates/buildout.cfg.ini ./buildout.cfg
+  $ cp ./templates/site-settings.cfg.ini ./buildout.d/site-settings.cfg
+
+
+Edite el archivo ``./buildout.cfg`` generado y adaptelo como lo siguiente:
+
+::
+
+  [buildout]
+  extends = buildout.d/development.cfg
+  #extends = buildout.d/staging.cfg
+  #extends = buildout.d/production.cfg
+
+**NOTA:** Guarde el cambio realizado, de esta forma, le indica a Buildout 
+que importe las configuraciones del entorno de trabajo de desarrollo 
+"development".
+
+
+Edite el archivo ``./buildout.d/site-settings.cfg`` generado a sus necesidades
+
+**NOTA:** Guarde el cambio realizado, de esta forma, le indica a Buildout 
+que importe las variables de las configuraciones del de los datos propios 
+del sitio web.
+
+
+Para **construir** una copia de este proyecto en entornos de
+desarrollo, ejecute las siguientes instrucciones en lineas de comando:
+
+.. code-block:: console
+
   $ virtualenv .
   $ source ./bin/activate
   $ python bootstrap.py
@@ -86,8 +99,8 @@ Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 Puede acceder al sitio a través de la dirección http://localhost:8080/
 
 
-Entorno de pruebas (staging)
-============================
+Entorno de Pruebas
+-------------------
 
 Ingresar al directorio donde se obtuvo la copia del buildout:
 
@@ -120,19 +133,11 @@ Para iniciar la instancia del sitio Plone, ejecute el siguiente comando:
 
 Puede acceder al sitio a través de la dirección http://localhost:8080/
 
-En caso de encontrar errores del tipo **"Can't update package 'xxx.yyy' because
-its URL doesn't match."** utilice el siguiente comando y ejecute nuevamente el
-buildout:
 
-.. code-block:: console
-
-  $ rm -rf ~/uptm/src/xxx.yyy
-
-Reemplace "xxx.yyy" por el nombre del paquete que se muestra en el mensaje de
-error.
+Entorno de Producción
+----------------------
 
 Pasos comunes para el entorno de producción y pruebas
-=====================================================
 
 Ejecución paso a paso:
 
@@ -199,11 +204,23 @@ necesarios para utilizar sudo.
 
     $ bin/update-so-config.sh
 
-Descargas
-=========
 
-Usted puede encontrar la versión de desarrollo del paquete ``uptm.website``
-en el `repositorio UPTM`_ en Github.com.
+Errores comunes
+===============
+
+**Error:** **"Can't update package 'xxx.yyy' because its URL doesn't match."**
+
+**Solución:** En caso de encontrar errores del tipo **"Can't update package 'xxx.yyy' because
+its URL doesn't match."** utilice el siguiente comando y ejecute nuevamente el
+buildout:
+
+.. code-block:: console
+
+  $ rm -rf ~/uptm/src/xxx.yyy
+
+Reemplace "xxx.yyy" por el nombre del paquete que se muestra en el mensaje de
+error.
+
 
 Sobre la calidad
 ================
