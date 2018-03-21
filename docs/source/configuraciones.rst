@@ -21,11 +21,6 @@ obtenidas tras la descarga previa realizada en la sección llamada
 
 .. glossary::
 
-   ``buildout.d/buildout.cfg.example``
-      Esta configuración zc.buildout ofrece una plantilla del 
-      archivo ``buildout.cfg`` que puede usar para la construcción 
-      del proyecto Plone.
-
    ``buildout.d/base.cfg``
       Esta configuración zc.buildout define las extensiones básicas 
       para la construcción del proyecto, además de la inclusión del 
@@ -70,6 +65,17 @@ obtenidas tras la descarga previa realizada en la sección llamada
    ``buildout.d/munin-install.cfg``
       Esta configuración zc.buildout genera las configuraciones de los plugins del servicio 
       :ref:`Munin <que_es_munin>` para los servicios la Plone.
+
+   ``templates/buildout.cfg.ini``
+      Esta configuración zc.buildout ofrece una plantilla del archivo ``buildout.cfg`` es 
+      el archivo principal de su proyecto buildout el cual se utiliza para elegir entre 
+      los para diversos entornos de trabajo como *development*, *staging*, *production* 
+      que a su ves importa las configuraciones especificas para cada entorno.
+
+   ``templates/site-settings.cfg.ini``
+      Esta configuración zc.buildout ofrece una plantilla del 
+      archivo ``buildout.d/site-settings.cfg`` que puede usar para la construcción 
+      del proyecto Plone y este incluye las variables de configuración del sitio.
 
    .. _profile_munin_zope:
 
@@ -156,7 +162,8 @@ más que fueron generadas tras la construcción del proyecto realizada en la sec
         Contiene las configuraciones para el servicio :ref:`HAProxy <que_es_haproxy>`.
 
     ``etc/logrotate.conf``
-        Contiene las configuraciones para rotar los archivos .log usando la herramienta ``logrotate``.
+        Contiene las configuraciones para rotar los archivos .log usando la herramienta 
+        ``logrotate``.
 
     ``etc/munin-plugin-sitioweb.conf``
         Contiene las configuraciones de los plugins de :ref:`Munin <que_es_munin>` para Plone.
