@@ -11,6 +11,8 @@
 *.swp
 *.wpr
 .*.cfg
+.coverage
+.eggs
 .installed.cfg
 .mr.developer.cfg
 .hg/
@@ -18,17 +20,25 @@
 .svn/
 .project
 .pydevproject
+*.sublime-*
 bin/
 build/
 develop-eggs/
+dist/
 downloads/
 eggs/
 fake-eggs/
+htmlcov/
+include/
+lib/
+local/
 parts/
-dist/
+src/
 var/
 
-
+# buildout.cfg
+buildout.d/site-settings.cfg
+pip-selfcheck.json
 
 # OSX
 .DS_Store
