@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Documentación del portal Canaima GNU/Linux documentation build configuration file, created by
+# Documentación del portal UPTM documentation build configuration file, created by
 # sphinx-quickstart on Wed Jun  3 06:06:18 2015.
 #
 # This file is execfile()d with the current directory set to its
@@ -42,8 +42,31 @@ extensions = [
 #    'collective.sphinx.autoatschema',
 #    'collective.sphinx.includedoc',
 #    'collective.sphinx.includechangelog',
-#    'qubic.sphinx.graphvizinclude', #http://pypi.python.org/pypi/qubic.sphinx.graphvizinclude
+#    'qubic.sphinx.graphvizinclude', #https://pypi.python.org/pypi/qubic.sphinx.graphvizinclude
 ]
+
+
+# Options for the linkcheck builder
+# Ignore localhost
+linkcheck_ignore = [
+    r'http://localhost:\d+/',
+    r'http://localhost:8080\d+/',
+    r'http://localhost:8080',
+    r'http://localhost:4200',
+    r'http://127.0.0.1:8080',
+    r'http://SU_DIRECCION_IP/',
+    r'http://SU_DIRECCION_IP:\d+/',
+    r'http://preview.uptm.edu.ve',
+    r'http://preview.uptm.edu.ve/\w+/',
+    r'http://wiki.apache.org',
+    r'https://www.vagrantup.com',
+    r'https://www.dipf.de/en/research/projects',
+    r'http://whatever.herokuapp.com',
+    r'http://example.com/news',
+    r'http://example.com\d+/',
+]
+linkcheck_anchors = False
+linkcheck_timeout = 30
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -58,8 +81,8 @@ source_encoding = 'utf-8-sig'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Documentacion del portal Canaima GNU/Linux'
-copyright = u'2013 - 2015, Proyecto Canaima GNU/Linux'
+project = u'Portal de la UPTM - Kleber Ramirez'
+copyright = u'2017 - 2018, Universidad Politécnica Territorial del Estado Mérida - Kleber Ramirez, Avenida Monseñor Duque, Ejido 5111, Mérida. Venezuela. RIF. G-20010201-2'
 author = u'Noe Nieto, Leonardo J. Caballero G.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -135,7 +158,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_title = u'%s - %s' % (project, release)
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = u"Portal Canaima GNU/Linux"
+html_short_title = u"Portal de la UPTM"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
@@ -212,7 +235,7 @@ html_search_language = 'es'
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'portal-canaima-gnu-linux'
+htmlhelp_basename = 'portal-uptm'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -234,13 +257,13 @@ latex_elements = {
 #''',
 
 # Additional stuff for the LaTeX preamble.
-# Proyecto Canaima GNU/Linux, Avenida Andrés Bello, sector Guaicaipuro, Torre Fondo Común, piso17. Caracas, Distrito Capital - Código Postal 1050. Venezuela.
+# Portal UPTM, Avenida Andrés Bello, sector Guaicaipuro, Torre Fondo Común, piso17. Caracas, Distrito Capital - Código Postal 1050. Venezuela.
 'preamble': r'''
 \authoraddress{
-  \strong{Proyecto Canaima GNU/Linux, Avenida Andres Bello, sector Guaicaipuro, Torre Fondo Comun, piso17. Caracas, Distrito Capital - Codigo Postal 1050. Venezuela.}\\
-  \strong{Telf.} +58 (212) 509-4211 - 0500-CNTI-000 o (0212) 576-6312\\
-  \strong{Contactos:} \email{discusion@canaima.softwarelibre.gob.ve} - 
-  \url{https://canaima.softwarelibre.gob.ve/}
+  \strong{UPTM, Avenida Monseñor Duque, Ejido 5111, Mérida. Venezuela. RIF. G-20010201-2}\\
+  \strong{Teléfono(s)} +58 (274) 2210746 \\
+  \strong{Contactos:} \email{contactos@uptm.edu.ve} - 
+  \url{http://www.uptm.edu.ve/}
 }
 \let\Verbatim=\OriginalVerbatim
 \let\endVerbatim=\endOriginalVerbatim
@@ -250,10 +273,10 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
-_stdauthor = r'Noe Nieto, Leonardo J. Caballero G.'
+_stdauthor = r'Noe nieto, LEonardo j. Caballero G.'
 latex_documents = [
-  ('index', 'portal-canaima-gnu-linux.tex', u'Documentación del portal Canaima GNU/Linux',
-   u'Centro Nacional de Tecnología de Información - CNTI', _stdauthor, 'manual'),
+  ('index', 'portal-uptm.tex', u'Documentación del portal UPTM',
+   u'Universidad Politécnica Territorial del Estado Mérida - Kleber Ramirez - UPTM', _stdauthor, 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -282,7 +305,7 @@ latex_appendices = ['glosario','acerca','copyright','licencia','buildout/replica
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 #man_pages = [
-#    ('portal-canaima-gnu-linux', 'Canaima GNU/Linux', u'Documentación del portal Canaima GNU/Linux',
+#    ('portal-uptm', 'UPTM', u'Documentación del portal UPTM',
 #     [u'Noe Nieto, Leonardo J. Caballero G.'], 1)
 #]
 
@@ -296,8 +319,8 @@ latex_appendices = ['glosario','acerca','copyright','licencia','buildout/replica
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'portal-canaima-gnu-linux', u'Documentación del portal Canaima GNU/Linux Documentation',
-   author, 'portal-canaima-gnu-linux', 'One line description of project.',
+  (master_doc, 'portal-uptm', u'Documentación del portal UPTM',
+   author, 'portal-uptm', 'One line description of project.',
    'Miscellaneous'),
 ]
 
@@ -317,13 +340,13 @@ texinfo_documents = [
 # -- Options for Epub output ----------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Documentación del portal Canaima GNU/Linux'
+epub_title = u'Documentación del portal de la Universidad Politécnica Territorial del Estado Mérida - Kleber Ramirez'
 epub_author = u'Noe Nieto, Leonardo J. Caballero G.'
-epub_publisher = u'Centro Nacional de Tecnología de Información - CNTI'
-epub_copyright = u'2013 - 2015, CNTI - ' + epub_author
+epub_publisher = u'Universidad Politécnica Territorial del Estado Mérida - Kleber Ramirez'
+epub_copyright = u'2017 - 2018, UPTM - ' + epub_author
 
 # The basename for the epub file. It defaults to the project name.
-#epub_basename = u'Documentación del portal Canaima GNU/Linux'
+#epub_basename = u'Documentación del portal UPTM'
 
 # The HTML theme for the epub output. Since the default themes are not optimized
 # for small screen space, using the same theme for HTML and epub output is

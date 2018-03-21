@@ -45,7 +45,7 @@ instalación de buildout y funciona de esta manera:
         supervisor
 
     # This recipe help to install Supervisor, one to rule them all
-    # For options see http://pypi.python.org/pypi/collective.recipe.supervisor
+    # For options see https://pypi.python.org/pypi/collective.recipe.supervisor
     [supervisor]
     recipe = collective.recipe.supervisor
     port = ${ports:supervisor}
@@ -136,7 +136,7 @@ el cual inicia todos los servicios necesarios para que Plone este funcionado cor
         supervisor-crontab
 
     # This recipe help to Run once Supervisor, at startup.
-    # For options see http://pypi.python.org/pypi/z3c.recipe.usercrontab
+    # For options see https://pypi.python.org/pypi/z3c.recipe.usercrontab
     [supervisor-crontab]
     recipe = z3c.recipe.usercrontab
     # copied from https://help.ubuntu.com/community/CronHowto
@@ -391,4 +391,4 @@ Referencias
 -   `Buildout para instalar de todas las partes de un sitio`_.
 
 .. _Supervisor: http://supervisord.org/
-.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.org/en/latest/buildout/plone-esquema-alta-disponibilidad.html
+.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.io/es/latest/buildout/plone_esquema_alta_disponibilidad.html

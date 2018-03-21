@@ -12,8 +12,8 @@ Zope Object Database - ZODB
 
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
-    :Compatible con: Plone 3.x, Plone 4.x
-    :Fecha: 23 de Marzo de 2015
+    :Compatible con: Plone 3.x, Plone 4.x, Plone 5.x
+    :Fecha: 20 de Marzo de 2018
 
 La Zope Object Database (ZODB) es una base de datos orientada a objetos 
 para almacenar de forma transparente y persistente objetos en el lenguaje 
@@ -41,7 +41,7 @@ Historia
 ========
 
 -  Creado por `Jim Fulton <http://www.zope.com/about_us/management/james_fulton.html>`_ de 
-   `Zope Corporation <http://es.wikipedia.org/wiki/Zope#Zope_Corporation>`_ a finales de los años 90.
+   `Zope Corporation <https://es.wikipedia.org/wiki/Zope#Zope_Corporation>`_ a finales de los años 90.
 
 -  Inicio como un simple sistema de `persistencia de
    Objetos <https://es.wikipedia.org/wiki/Persistencia_de_objetos>`_ (Persistent Object System -
@@ -70,7 +70,7 @@ un punto único de fallo.
 Almacenes de datos basado en conectores
 =======================================
 
--  `FileStorage <http://docs.zope.org/zope2/zdgbook/ZODBPersistentComponents.html>`_
+-  `FileStorage <https://zope.readthedocs.io/en/latest/zdgbook/ZODBPersistentComponents.html>`_
    - Permite que un único proceso de Python para hablar con un archivo
    en el disco.
    
@@ -191,7 +191,7 @@ sistema de archivos. En el directorio por defecto del Blobstorage se encuentran
     los cuales puede :ref:`respaldarse con la ZODB <backup_zodb>` o por separado
     usando :program:`rsync` para `sincronizar los directorios`_.
 
-.. _Subversion: http://plone-spanish-docs.readthedocs.org/es/latest/rcs/subversion.html#rcs-subversion
-.. _compactación: https://plone-spanish-docs.readthedocs.org/es/latest/zope/zodb/compactar.html#compactar-zodb
-.. _la actualización de catalogo: https://plone-spanish-docs.readthedocs.org/es/latest/zope/zodb/actualizar_catalog.html#actualizar-zcatalog
-.. _sincronizar los directorios: https://plone-spanish-docs.readthedocs.org/es/latest/zope/zodb/respaldar.html#blob-storages
+.. _Subversion: http://plone-spanish-docs.readthedocs.io/es/latest/rcs/subversion.html#rcs-subversion
+.. _compactación: https://plone-spanish-docs.readthedocs.io/es/latest/zope/zodb/compactar.html#compactar-zodb
+.. _la actualización de catalogo: https://plone-spanish-docs.readthedocs.io/es/latest/zope/zodb/actualizar_catalog.html#actualizar-zcatalog
+.. _sincronizar los directorios: https://plone-spanish-docs.readthedocs.io/es/latest/zope/zodb/respaldar.html#blob-storages

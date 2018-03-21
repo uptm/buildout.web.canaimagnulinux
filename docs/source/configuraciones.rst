@@ -7,8 +7,8 @@
 Configuraciones generales
 =========================
 
-Plone 4 ofrece varios niveles de configuración a continuación 
-se describen cada uno:
+Plone 4 y los servicios que se orquestan en esta stack de instalación 
+ofrece varios niveles de configuración a continuación se describen cada uno:
 
 .. _configuraciones_buildout:
 
@@ -124,7 +124,7 @@ obtenidas tras la descarga previa realizada en la sección llamada
 
    ``buildout.d/sources.cfg``
       Esta configuración zc.buildout le permite definir los origenes de paquetes Egg 
-      a usar, los cuales se define en la sección ``[sources].
+      a usar, los cuales se define en la sección ``[sources]``.
 
    ``buildout.d/maintenance.cfg``
       Esta configuración zc.buildout le permite definir tareas de actualización y 

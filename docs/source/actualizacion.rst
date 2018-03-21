@@ -14,7 +14,7 @@ y actualizaciones de seguridad, para esto se ofrecen los siguientes procedimient
 Sistema operativo
 =================
 
-Cuando requiere actualizar actualizaciones de su sistema operativo *Debian GNU/Linux 7*, 
+Cuando requiere actualizar actualizaciones de su sistema operativo *Debian GNU/Linux 9*, 
 es necesario realizar cumplir y realizar varios procedimientos, a continuación se describen estos:
 
 #. Requiere disponer de acceso a Internet para descargar las actualizaciones.
@@ -130,4 +130,4 @@ generar los documentos finales, para esto es necesario ejecutar los siguientes p
        $ cd docs/ ; make html
 
 Y con esto tendrá disponible la ultima documentación de la Plone en la 
-dirección http://preview.canaima.net.ve/docs/
+dirección http://preview.uptm.edu.ve/docs/

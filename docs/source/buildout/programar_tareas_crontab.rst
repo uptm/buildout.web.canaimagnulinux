@@ -11,7 +11,7 @@ Programar tareas con crontab
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
     :Compatible con: Python 2.4 o versiones superiores
-    :Fecha: 23 de Marzo de 2015
+    :Fecha: 20 de Marzo de 2018
 
 Descripción general
 ===================
@@ -28,7 +28,7 @@ hacerlo dentro de un `entorno virtual`_):
 
 .. code-block:: sh
 
-  $ pip install zc.buildout
+  $ pip install zc.buildout --timeout 120
 
 Ahora crea una nueva configuración zc.buildout así:
 
@@ -61,7 +61,7 @@ Puedes cambiarlo a:
       restart-zope-daily
       
   # Este récipe ayuda a configurar una tarea de crontab de rotación de archivos log.
-  # Para mayor información ver http://pypi.python.org/pypi/z3c.recipe.usercrontab
+  # Para mayor información ver https://pypi.python.org/pypi/z3c.recipe.usercrontab
   [restart-zope-daily]
   recipe = z3c.recipe.usercrontab
   times = 0 3 * * 0-6
@@ -113,7 +113,7 @@ Referencias
 
 -   `Buildout - How to maintain big app stacks without losing your mind`_.
 
-.. _crontab: http://es.wikipedia.org/wiki/Cron_%28Unix%29
-.. _Buildout - How to maintain big app stacks without losing your mind: http://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
-.. _pip: http://plone-spanish-docs.readthedocs.org/es/latest/python/distribute_pip.html#que-es-pip
-.. _entorno virtual: http://plone-spanish-docs.readthedocs.org/es/latest/python/creacion_entornos_virtuales.html#creacion-entornos-virtuales
+.. _crontab: https://es.wikipedia.org/wiki/Cron_%28Unix%29
+.. _Buildout - How to maintain big app stacks without losing your mind: https://www.slideshare.net/djay/buildout-how-to-maintain-big-app-stacks-without-losing-your-mind
+.. _pip: http://plone-spanish-docs.readthedocs.io/es/latest/python/distribute_pip.html#que-es-pip
+.. _entorno virtual: http://plone-spanish-docs.readthedocs.io/es/latest/python/creacion_entornos_virtuales.html#creacion-entornos-virtuales

@@ -10,8 +10,8 @@ Replicación de proyectos Python
 
     :Autor(es): Leonardo J. Caballero G.
     :Correo(s): leonardoc@plone.org
-    :Compatible con: Python 2.4 o versiones superiores
-    :Fecha: 23 de Marzo de 2015
+    :Compatible con: Python 2.7 o versiones superiores
+    :Fecha: 20 de Marzo de 2018
 
 .. _que_es_zcbuildout:
 
@@ -128,7 +128,7 @@ hacerlo dentro de un `entorno virtual`_):
 
 .. code-block:: sh
 
-  $ pip install zc.buildout
+  $ pip install zc.buildout --timeout 120
 
 
 Funcionamiento
@@ -164,19 +164,24 @@ Buildout, para esto debe ejecutar los siguientes comando:
 
 .. code-block:: sh
 
-  $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{downloads,eggs,extends,zope}
-  $ nano $HOME/.buildout/default.cfg
+  $ mkdir -p $HOME/.buildout/{downloads,eggs,extends,zope} && echo $HOME $HOME $HOME $HOME | awk '{ printf( "[buildout]\neggs-directory = %s/.buildout/eggs\ndownload-cache = %s/.buildout/downloads\nextends-cache = %s/.buildout/extends\nzope-directory = %s/.buildout/zope\nabi-tag-eggs = true\n", $1, $2, $3, $4 ) }' >> ~/.buildout/default.cfg
 
-Luego de crear el archivo :file:`default.cfg` defina algunas configuraciones de 
-usuario predeterminadas para cualquier parte de su configuración :term:`buildout`:
+..
+  .. code-block:: sh
 
-.. code-block:: cfg
+    $ mkdir $HOME/.buildout ; mkdir $HOME/.buildout/{downloads,eggs,extends,zope}
+    $ nano $HOME/.buildout/default.cfg
 
-  [buildout]
-  download-cache = /ruta/absoluta/al/home/del/usuario/.buildout/downloads
-  eggs-directory = /ruta/absoluta/al/home/del/usuario/.buildout/eggs
-  extends-cache = /ruta/absoluta/al/home/del/usuario/.buildout/extends
-  zope-directory = /ruta/absoluta/al/home/del/usuario/.buildout/zope
+  Luego de crear el archivo :file:`default.cfg` defina algunas configuraciones de 
+  usuario predeterminadas para cualquier parte de su configuración :term:`buildout`:
+
+  .. code-block:: cfg
+
+    [buildout]
+    download-cache = /ruta/absoluta/al/home/del/usuario/.buildout/downloads
+    eggs-directory = /ruta/absoluta/al/home/del/usuario/.buildout/eggs
+    extends-cache = /ruta/absoluta/al/home/del/usuario/.buildout/extends
+    zope-directory = /ruta/absoluta/al/home/del/usuario/.buildout/zope
 
 .. note::
 
@@ -270,15 +275,15 @@ Referencias
 
 -   `Arquitectura de componentes Zope`_.
 
-.. _zc.buildout: http://pypi.python.org/pypi/zc.buildout/
-.. _zope.component: http://pypi.python.org/pypi/zope.component
-.. _zc.recipe.egg: http://pypi.python.org/pypi/zc.recipe.egg
+.. _zc.buildout: https://pypi.python.org/pypi/zc.buildout/
+.. _zope.component: https://pypi.python.org/pypi/zope.component
+.. _zc.recipe.egg: https://pypi.python.org/pypi/zc.recipe.egg
 .. _Buildout: http://www.buildout.org/
-.. _Plone en entornos de producción: http://plone-spanish-docs.readthedocs.org/es/latest/buildout/plone_esquema_alta_disponibilidad.html
+.. _Plone en entornos de producción: http://plone-spanish-docs.readthedocs.io/es/latest/buildout/plone_esquema_alta_disponibilidad.html
 .. _instalación LAMP: http://docs.pythonpackages.com/en/latest/hosted-configs/wordpress.html
-.. _formato .INI: http://es.wikipedia.org/wiki/INI_%28extensi%C3%B3n_de_archivo%29
+.. _formato .INI: https://es.wikipedia.org/wiki/INI_%28extensi%C3%B3n_de_archivo%29
 .. _Francisco Palm: https://github.com/fpalm
-.. _pip: http://plone-spanish-docs.readthedocs.org/es/latest/python/distribute_pip.html#que-es-pip
-.. _entorno virtual: http://plone-spanish-docs.readthedocs.org/es/latest/python/creacion_entornos_virtuales.html
-.. _consola interactiva Python: http://plone-spanish-docs.readthedocs.org/es/latest/python/una_pequena_inmersion_python.html
-.. _Arquitectura de componentes Zope: http://plone-spanish-docs.readthedocs.org/es/latest/programacion/zca/zca-es.html
+.. _pip: http://plone-spanish-docs.readthedocs.io/es/latest/python/distribute_pip.html#que-es-pip
+.. _entorno virtual: http://plone-spanish-docs.readthedocs.io/es/latest/python/creacion_entornos_virtuales.html
+.. _consola interactiva Python: http://plone-spanish-docs.readthedocs.io/es/latest/python/una_pequena_inmersion_python.html
+.. _Arquitectura de componentes Zope: http://plone-spanish-docs.readthedocs.io/es/latest/programacion/zca/zca-es.html

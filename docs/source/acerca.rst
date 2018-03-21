@@ -33,13 +33,13 @@ mediante el servicio `read the docs`_ en  la web.
 
 Gracias a todos los voluntarios adicionales quienes han trabajado para hacer esto posible.
 
-.. _traducciones plone: http://www.coactivate.org/projects/traducciones-plone/
-.. _Plone Conosur: http://plone.org/countries/conosur/
+.. _traducciones plone: https://www.coactivate.org/projects/traducciones-plone/project-home
+.. _Plone Conosur: https://old.plone.org/countries/conosur/
 .. _Noviembre de 2010: http://article.gmane.org/gmane.comp.web.zope.plone.user.spanish/480/
 .. _Mejores Practicas de Plone: http://www.plone.mx/docs/index.html
 .. _Fundación Cenditel: http://www.cenditel.gob.ve/
 .. _Wiki de documentación sobre Plone: http://plataforma.cenditel.gob.ve/wiki/Plone
 .. _Carlos de la Guardia: http://blog.delaguardia.com.mx/
-.. _Leonardo J. Caballero G.: http://about.me/macagua
-.. _collective.spanishdocumentation: http://github.com/collective/collective.spanishdocumentation 
-.. _read the docs: http://plone-spanish-docs.rtfd.org/
+.. _Leonardo J. Caballero G.: https://about.me/macagua
+.. _collective.spanishdocumentation: https://github.com/collective/collective.spanishdocumentation 
+.. _read the docs: http://plone-spanish-docs.readthedocs.io/es/latest/

@@ -35,9 +35,9 @@ Bajo los siguientes términos:
     usted podrá distribuir su contribución siempre que utilice la misma licencia que la obra 
     original.
 
-Términos de la licencia: http://creativecommons.org/licenses/by-sa/3.0/deed.es
+Términos de la licencia: https://creativecommons.org/licenses/by-sa/3.0/deed.es
 
-.. _Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported (CC BY-NC-SA 3.0): http://creativecommons.org/licenses/by-nc-sa/3.0/deed.es
+.. _Creative Commons Atribución-NoComercial-CompartirIgual 3.0 Unported (CC BY-NC-SA 3.0): https://creativecommons.org/licenses/by-nc-sa/3.0/deed.es
 
 Creative Commons Atribución-CompartirIgual 3.0 Venezuela
 ========================================================
@@ -67,6 +67,6 @@ Bajo los siguientes términos:
     usted podrá distribuir su contribución siempre que utilice la misma licencia que la obra
     original.
 
-Los términos detallados de la licencia: http://creativecommons.org/licenses/by-sa/3.0/ve/legalcode
+Los términos detallados de la licencia: https://creativecommons.org/licenses/by-sa/3.0/ve/legalcode
 
-.. _Creative Commons Atribución-CompartirIgual 3.0 Venezuela (CC BY-SA 3.0 VE): http://creativecommons.org/licenses/by-sa/3.0/ve/
+.. _Creative Commons Atribución-CompartirIgual 3.0 Venezuela (CC BY-SA 3.0 VE): https://creativecommons.org/licenses/by-sa/3.0/ve/

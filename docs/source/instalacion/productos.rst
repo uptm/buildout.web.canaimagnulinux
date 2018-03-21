@@ -19,7 +19,7 @@ describen a continuación:
       Este es un producto Plone le permite a los usuarios crear formulario de forma sencilla, agregando tipos de contenido, los cuales contiene todos los campos y acciones del formulario son totalmente configurables a través de la Web.
 
       .. tip::
-         Más información acerca del producto visite la dirección http://plone.org/products/ploneformgen/
+         Más información acerca del producto visite la dirección https://old.plone.org/products/ploneformgen/
 
 .. warning::
     Todos los productos instalados se están ubicados en el :ref:`directorio que fue creado <archivos_directorios_construidos>` tras la construcción de Plone, este es llamado ``eggs/``.
@@ -34,11 +34,11 @@ Serie de recursos útiles al desarrollador
 .. toctree::
    :maxdepth: 2
 
-   Manual de referencia Git <http://git-scm.com/book/es>
+   Manual de referencia Git <https://git-scm.com/book/es/v2>
    
 Enlaces de utilidad
 -------------------
 
 * Repositorio de código fuente: https://github.com/collective
 
-.. _pdb: http://docs.python.org/release/2.4/lib/module-pdb.html
+.. _pdb: https://docs.python.org/2/library/pdb.html

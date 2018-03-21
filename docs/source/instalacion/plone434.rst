@@ -8,18 +8,19 @@ Plone 4.3.x
 ===========
 
 Para instalar Plone en su versión 4.3 en entornos de servidores usando el 
-sistema operativo :ref:`Debian GNU/Linux 7 <debian7>`, debe ejecutar 
+sistema operativo :ref:`Debian GNU/Linux 9 <debian9>`, debe ejecutar 
 los siguientes pasos con sus respectivos comando a continuación:
 
-Dependencias de paquetes eggs
------------------------------
+..
+    Dependencias de paquetes eggs
+    -----------------------------
 
-Para la instalación de dependencias en :term:`paquetes Egg` Python propias 
-de Plone 4.3.x, ejecute con el siguiente comando:
+    Para la instalación de dependencias en :term:`paquetes Egg` Python propias 
+    de Plone 4.3.x, ejecute con el siguiente comando:
 
-.. code-block:: console
- 
-    (python2.7)$ easy_install-2.7 "setuptools==0.6c11"
+    .. code-block:: console
+
+        (python2.7)$ pip2.7 install "setuptools==0.6c11"
 
 .. _obteber_plone:
 
@@ -32,7 +33,7 @@ comandos:
 .. code-block:: console
 
     $ cd $HOME/
-    $ git clone https://github.com/CanaimaGNULinux/buildout.web.canaimagnulinux.git sitioweb
+    $ git clone https://github.com/uptm/uptm.website.git sitioweb
     $ cd $HOME/sitioweb
 
 .. note:: 

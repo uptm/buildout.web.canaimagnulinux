@@ -52,7 +52,7 @@ Compactación de la base de datos
 ================================
 
 Debido a la naturaleza de la base de datos :ref:`ZODB <que_es_zodb>` 
-de Plone con el mecanismo de `FileStorage <http://docs.zope.org/zope2/zdgbook/ZODBPersistentComponents.html>`_ 
+de Plone con el mecanismo de `FileStorage <https://zope.readthedocs.io/en/latest/zdgbook/ZODBPersistentComponents.html>`_ 
 esta guarda todas las modificaciones a las contenidos o configuraciones 
 realizadas desde Plone y :ref:`Zope <que_es_zope>`, 
 incluso las configuraciones de que módulos adicionales tiene habilitados 
@@ -121,4 +121,4 @@ Se define varias tareas de respaldo de la base de datos las cuales se describen 
     # END /home/plone/sitioweb [backup-full-weekly-crontab]
 
 .. _rotación de archivos registros: http://manpages.ubuntu.com/manpages/hardy/es/man8/logrotate.8.html
-.. _crontab: http://es.wikipedia.org/wiki/Cron_(Unix)
+.. _crontab: https://es.wikipedia.org/wiki/Cron_(Unix)

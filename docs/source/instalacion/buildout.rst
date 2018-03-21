@@ -25,17 +25,28 @@ busca el archivo ``buildout.cfg`` en el directorio donde se ejecuta el buildout.
 .. _por_que_buildout:
 
 ¿Por que usar buildout con Plone?
------------------------------------
+----------------------------------
 
 Es el mecanismo por defecto para construir Plone, ademas gracias a las :ref:`configuraciones <configuraciones_buildout>`, orquesta todos los servicios de :ref:`Alta disponibilidad para Plone <requerimientos>`.
 
-Instalando zc.buildout
-----------------------
-Para instalar ``buildout`` dentro de un entorno virtual activo, ejecute el siguiente comando:
+..
+	Instalando zc.buildout
+	----------------------
+	Para instalar ``buildout`` dentro de un entorno virtual activo, ejecute el siguiente comando:
 
-.. code-block:: console
+	.. code-block:: console
 
-    (python2.7)$ easy_install-2.7 "zc.buildout==1.7.1"
+	    (python2.7)$ pip2.7 install "zc.buildout==1.7.1"
+
+Configurando zc.buildout
+-------------------------
+Para configurar ``buildout`` puede agregar las configuraciones genéricas 
+para todos sus proyectos Buildout, para esto debe ejecutar los siguientes 
+comando:
+
+.. code-block:: sh
+
+  $ mkdir -p $HOME/.buildout/{downloads,eggs,extends,zope} && echo $HOME $HOME $HOME $HOME | awk '{ printf( "[buildout]\neggs-directory = %s/.buildout/eggs\ndownload-cache = %s/.buildout/downloads\nextends-cache = %s/.buildout/extends\nzope-directory = %s/.buildout/zope\nabi-tag-eggs = true\n", $1, $2, $3, $4 ) }' >> ~/.buildout/default.cfg
 
 .. _Buildout: https://pypi.python.org/pypi/zc.buildout/
-.. _ConfigParser: http://docs.python.org/release/2.4/lib/module-ConfigParser.html
+.. _ConfigParser: https://docs.python.org/2/library/configparser.html

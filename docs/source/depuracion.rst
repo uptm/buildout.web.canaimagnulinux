@@ -212,19 +212,19 @@ Verifique si su configuración :ref:`Nginx <nginx_setup>` es correcta, con el si
 
   $ sudo nginx -t
 
-Verifique el registro de acceso del virtual host ``preview.canaima.net.ve``, con 
+Verifique el registro de acceso del virtual host ``preview.uptm.edu.ve``, con 
 el siguiente comando:
 
 .. code-block:: sh
 
-  $ tail -f /var/log/nginx/preview.canaima.net.ve.access.log;
+  $ tail -f /var/log/nginx/preview.uptm.edu.ve.access.log;
 
-Verifique el registro de eventos del virtual host ``preview.canaima.net.ve``, con 
+Verifique el registro de eventos del virtual host ``preview.uptm.edu.ve``, con 
 el siguiente comando:
 
 .. code-block:: sh
 
-  $ tail -f /var/log/nginx/preview.canaima.net.ve.error.log;
+  $ tail -f /var/log/nginx/preview.uptm.edu.ve.error.log;
 
 .. tip::
     Cada comando se ejecuta en una consola distinta, así poder monitorear cualquier
@@ -285,7 +285,7 @@ Para instalarla ejecute el siguiente comando:
 
 .. code-block:: sh
 
-  $ sudo pip install httpie
+  $ sudo pip install httpie --timeout 120
 
 Patrón de pruebas
 -----------------
@@ -349,4 +349,4 @@ siguientes comandos:
   $ http GET http://127.0.0.1:9001
 
 .. _HTTPie: https://pypi.python.org/pypi/httpie
-.. _cURL: http://es.wikipedia.org/wiki/CURL
+.. _cURL: https://es.wikipedia.org/wiki/CURL

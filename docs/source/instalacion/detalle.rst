@@ -8,7 +8,7 @@ Detalles de la instalación
 ==========================
 
 Para instalar Plone en su versión 3.4.3 en entornos de servidores 
-usando el sistema operativo :ref:`Debian GNU/Linux 7 <debian7>`, 
+usando el sistema operativo :ref:`Debian GNU/Linux 9 <debian9>`, 
 debe ejecutar los siguientes pasos con sus respectivos comando a 
 continuación:
 
@@ -119,14 +119,14 @@ los cuales se describen a continuación:
 
         .. tip:: 
             Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia
-            la receta en la siguiente dirección http://pypi.python.org/pypi/collective.recipe.backup.
+            la receta en la siguiente dirección https://pypi.python.org/pypi/collective.recipe.backup.
 
     ``bin/develop``
         Es un script generado por la extensión de buildout llamada **mr.developer** dentro del perfil de instalación ``base.cfg``, el cual es usado para realizar descargas de productos adicionales de Plone o Python Egg en modo de desarrollo.
 
         .. tip:: 
             Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia la 
-            receta en la siguiente dirección http://pypi.python.org/pypi/mr.developer.
+            receta en la siguiente dirección https://pypi.python.org/pypi/mr.developer.
 
     ``bin/fullbackup``
         Es un script que le permite hacer un :ref:`backup <backup_zodb>` **completo** de la :ref:`ZODB <que_es_zodb>`.
@@ -135,7 +135,7 @@ los cuales se describen a continuación:
         usando la receta ``collective.recipe.backup``.
 
         .. tip:: Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia del 
-            récipe en la siguiente dirección http://pypi.python.org/pypi/collective.recipe.backup.
+            récipe en la siguiente dirección https://pypi.python.org/pypi/collective.recipe.backup.
 
     ``bin/snapshotbackup``
         Es un script que le permite hacer un :ref:`backup <backup_zodb>` **completo** de la :ref:`ZODB <que_es_zodb>`, 
@@ -146,7 +146,7 @@ los cuales se describen a continuación:
         usando la receta ``collective.recipe.backup``.
 
         .. tip:: Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia la receta
-            en la siguiente dirección http://pypi.python.org/pypi/collective.recipe.backup.
+            en la siguiente dirección https://pypi.python.org/pypi/collective.recipe.backup.
 
     ``bin/instance``
         Este script fue generado por la sección llamada .instance. dentro del perfil de instalación ``production.cfg``, 
@@ -157,7 +157,7 @@ los cuales se describen a continuación:
 
         .. tip:: 
             Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia de 
-            la receta en la siguiente dirección http://pypi.python.org/pypi/plone.recipe.zope2instance
+            la receta en la siguiente dirección https://pypi.python.org/pypi/plone.recipe.zope2instance
 
     ``bin/client-debug``
         Es un script de arranque del :ref:`cliente Zeo <clientes_zeo>` en modo de depuración para labores administrativas.
@@ -179,7 +179,7 @@ los cuales se describen a continuación:
         usando la receta ``collective.recipe.backup``.
 
         .. tip:: Más información sobre los parámetros usados o otros parámetros disponibles consulte la referencia del
-            récipe en la siguiente dirección http://pypi.python.org/pypi/collective.recipe.backup.
+            récipe en la siguiente dirección https://pypi.python.org/pypi/collective.recipe.backup.
 
     ``bin/zopepy``
         Script para hacer inmersiones interactivas de Python en 
@@ -250,5 +250,5 @@ los cuales se describen a continuación:
         Contiene archivos de Logs de Zope tales como ``instance.log`` (archivo de errores) 
         y ``instance-Z2.log`` (archivo de acceso).
 
-.. _pdb: http://docs.python.org/release/2.4/lib/module-pdb.html
-.. _puntos de montaje de ZODB: https://plone-spanish-docs.readthedocs.org/es/latest/zope/zodb/index.html#directorios-de-zodb
+.. _pdb: https://docs.python.org/2/library/pdb.html
+.. _puntos de montaje de ZODB: https://plone-spanish-docs.readthedocs.io/es/latest/zope/zodb/index.html#directorios-de-zodb

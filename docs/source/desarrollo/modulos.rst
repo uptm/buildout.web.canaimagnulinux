@@ -26,7 +26,7 @@ A continuación se describen los productos Zope que usa la instalación
       Este es un producto Plone que provee importar y exportar un archivo .Zip a 
       la instalación :ref:`Plone <caso_estudio>`.
 
-      Más información acerca del producto visite la siguiente dirección http://plone.org/products/zipfiletransport
+      Más información acerca del producto visite la siguiente dirección https://old.plone.org/products/zipfiletransport
 
 .. _paquetes_egg_plone:
 

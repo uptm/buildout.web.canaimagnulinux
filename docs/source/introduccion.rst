@@ -10,27 +10,27 @@ Introducción
 
 Esta documentación le enseñará a como hacer instalaciones y aplicar 
 sus configuraciones para instalar Plone en entornos de producción para 
-`Canaima GNU/Linux <http://.canaima.softwarelibre.gob.ve/>`_.
+`UPTM <http://www.uptm.edu.ve/>`_.
 
 .. _acerca_portal_web:
 
 Acerca del portal web
 =====================
 
-En el proyecto Canaima GNU/Linux se utiliza en su sitio Web el CMS llamado 
-Plone, con la finalidad de facilitar la carga y consulta de las noticias, 
-eventos, archivos, galerías de imágenes, grupos de trabajo, flujos de publicación 
-para contenidos, etc; de forma más eficiente. 
+En la UPTM se utiliza en su sitio Web el CMS llamado Plone, con la finalidad 
+de facilitar la carga y consulta de las noticias, eventos, archivos, galerías 
+de imágenes, grupos de trabajo, flujos de publicación para contenidos, etc; 
+de forma más eficiente. 
 
 .. figure:: _static/logo.png
   :width: 228px
   :align: center
-  :alt: Logotipo de Canaima GNU/Linux
+  :alt: Logotipo de UPTM
 
-  Logotipo de **Canaima GNU/Linux**.
+  Logotipo de **UPTM**.
 
 El sitio Web del proyecto hasta la fecha en la organización, puede 
-consultar la plataforma en la siguiente dirección http://preview.canaima.net.ve/
+consultar la plataforma en la siguiente dirección http://preview.uptm.edu.ve/
 
 .. _caso_estudio:
 
@@ -39,7 +39,7 @@ El caso de estudio
 
 El caso de estudio que es utilizado en este documento intenta explicar 
 un caso complejo de instalación de Plone en entornos de producción bajo 
-:ref:`Debian GNU/Linux <debian7>`, el cual permite:
+:ref:`Debian GNU/Linux <debian9>`, el cual permite:
 
 * **Comportamiento del servicio separado por capas**, esto es ideal para 
   organizaciones donde diversas personas tiene la potestad de administrar 
@@ -127,6 +127,6 @@ los siguientes enlaces a continuación:
 
 * `Installing and Staring Zope`_.
 
-.. _Escalamiento y ejecución de Plone: http://scalingplone.pbworks.com/FrontPage-ES
-.. _Guide to deploying and installing Plone in production: http://docs.plone.org/manage/deploying/index.html
-.. _Installing and Staring Zope: http://docs.zope.org/zope2/zope2book/InstallingZope.html
+.. _Escalamiento y ejecución de Plone: http://scalingplone.pbworks.com/w/page/33752243/FrontPage-ES
+.. _Guide to deploying and installing Plone in production: https://docs.plone.org/manage/deploying/index.html
+.. _Installing and Staring Zope: https://zope.readthedocs.io/en/latest/zope2book/InstallingZope.html

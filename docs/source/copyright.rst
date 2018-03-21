@@ -59,8 +59,8 @@ Todas esta documentación es licencia por:
 
 .. seealso:: Ver :ref:`licencias <licencias>` para información completa sobre los términos y licencia.
 
-.. _Fundación Plone: http://plone.org/foundation/
-.. _Plone Foundation: http://plone.org/foundation/
-.. _traducciones plone: http://www.coactivate.org/projects/traducciones-plone/
-.. _Plone Conosur: http://plone.org/countries/conosur/
+.. _Fundación Plone: https://old.plone.org/foundation/
+.. _Plone Foundation: https://old.plone.org/foundation/
+.. _traducciones plone: https://www.coactivate.org/projects/traducciones-plone/project-home
+.. _Plone Conosur: https://old.plone.org/countries/conosur/
 .. _Fundación Cenditel: http://www.cenditel.gob.ve/

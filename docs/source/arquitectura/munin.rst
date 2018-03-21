@@ -93,7 +93,7 @@ Este es el archivo que define cada clientes el cual el servidor
 maestro ira a pedir información.
 
 En este caso se usa un modo simple es decir, el servidor maestro 
-y en cliente consultaran información desde **preview.canaima.net.ve** 
+y en cliente consultaran información desde **preview.uptm.edu.ve** 
 la cual es accesible en la dirección **127.0.0.1**.
 
 Edite el archivo del servidor maestro :file:`/etc/munin/munin.conf`, 
@@ -125,7 +125,7 @@ Asegúrese que se parezca a la siguiente configuración: ::
     includedir /etc/munin/munin-conf.d
 
     # a simple host tree
-    [preview.canaima.net.ve]
+    [preview.uptm.edu.ve]
         address 127.0.0.1
         use_node_name yes
 
@@ -365,7 +365,7 @@ puede iniciar la tarea con el siguiente comando:
     $ sudo -u munin munin-cron
 
 De esta forma tiene disponible las gráficas HTML generadas en la 
-dirección http://preview.canaima.net.ve/munin/
+dirección http://preview.uptm.edu.ve/munin/
 
 Referencias
 -----------

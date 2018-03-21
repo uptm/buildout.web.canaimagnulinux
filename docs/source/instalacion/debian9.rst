@@ -2,13 +2,13 @@
 
 .. highlight:: rest
 
-.. _debian7:
+.. _debian9:
 
-Debian GNU/Linux 7
+Debian GNU/Linux 9
 ==================
 
 Para instalar Plone 4.3.x en entornos de servidores usando 
-el sistema operativo `Debian GNU/Linux 7`_, debe ejecutar 
+el sistema operativo `Debian GNU/Linux 9`_, debe ejecutar 
 los siguientes pasos con sus respectivos comandos a continuación:
 
 .. _create_user:
@@ -22,21 +22,21 @@ generada por la utilidad ``mkpasswd``, con el siguiente comando:
 
 .. code-block:: bash
 
-    # adduser plone sudo
+    $ sudo adduser plone sudo
 
 Luego inicie sesión con el usuario ``plone`` y la contraseña elegida, 
 con el siguiente comando:
 
 .. code-block:: bash
 
-    # su plone
+    $ sudo su plone
 
 .. _upgrade_base:
 
 Actualizaciones de seguridad
 ----------------------------
 
-Primero, instale las últimas actualizaciones del *Debian GNU/Linux 7*, 
+Primero, instale las últimas actualizaciones del *Debian GNU/Linux 9*, 
 con el siguiente comando:
 
 .. code-block:: bash
@@ -56,8 +56,8 @@ debe ejecutar el siguiente comando:
 .. code-block:: bash
 
     $ sudo apt-get install gcc g++ make tar unzip bzip2 libssl-dev libxml2-dev \
-                   zlib1g-dev libjpeg62-dev libreadline6-dev readline-common wv \
-                   xpdf-utils python2.7-dev libxslt1-dev
+                   zlib1g-dev libjpeg62-turbo-dev libreadline-dev readline-common wv \
+                   poppler-utils python2.7-dev libxslt1-dev
 
 .. _requerimientos_instalacion_cliente_ldap:
 
@@ -149,7 +149,13 @@ ejecutar el siguiente comando:
 .. code-block:: console
  
     $ sudo apt-get install munin munin-node
-    $ sudo apt-get install curl socat coreutils libwww-perl #Haproxy munin plugins
 
-.. _Debian GNU/Linux 7: http://es.wikipedia.org/wiki/Debian_GNU/Linux
-.. _usuario efectivo: https://plone-spanish-docs.readthedocs.org/es/latest/instalacion/instalando_plone.html#instalacion-como-root-o-usuario-normal
+Para el funcionamiento de los plugins munin para el servicio Haproxy, debe ejecutar el 
+siguiente comando:
+
+.. code-block:: console
+ 
+    $ sudo apt-get install curl socat coreutils libwww-perl
+
+.. _Debian GNU/Linux 9: https://es.wikipedia.org/wiki/Debian_GNU/Linux
+.. _usuario efectivo: https://plone-spanish-docs.readthedocs.io/es/latest/instalacion/instalando_plone.html#instalacion-como-root-o-usuario-normal

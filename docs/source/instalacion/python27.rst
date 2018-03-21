@@ -9,7 +9,7 @@ Python 2.7
 
 La versión de Plone 4.3.x requiere como dependencia **obligatoria** 
 el interprete Python 2.7. Debido a que Python 2.7 `esta disponible`_ 
-en sistema de paquetes :ref:`Debian GNU/Linux 7 <debian7>`, se recomienda 
+en sistema de paquetes :ref:`Debian GNU/Linux 9 <debian9>`, se recomienda 
 solo instalar algunas herramientas necesarias para esta instalación.
 
 Antes de compilar Python 2.7 requiere haber instalado las 
@@ -19,6 +19,16 @@ Antes de compilar Python 2.7 requiere haber instalado las
  
     $ sudo apt-get install python-pip python-setuptools
 
+Configurando pip
+-----------------
+Para configurar ``pip`` puede agregar las configuraciones genéricas, cache 
+de paquetes Python para todos sus proyectos, para esto debe ejecutar los 
+siguientes comando:
+
+.. code-block:: sh
+
+  $ mkdir -p ~/.cache/pip && mkdir ~/.pip && printf '[global]\ndownload_cache = ~/.cache/pip\n' >> ~/.pip/pip.conf
+
 Prueba del interprete
 ---------------------
 
@@ -27,7 +37,7 @@ Verifique que tenga soporte a Python 2.7, de la siguiente manera:
 .. code-block:: sh
  
     $ python2.7 --version
-    Python 2.7.3
+    Python 2.7.13
 
 De esta forma tiene instalado su Python versión 2.7.x.
 
@@ -104,7 +114,7 @@ Prepare su entorno virtual, ejecute los siguientes comando:
 
 .. code-block:: console
  
-    $ sudo easy_install-2.7 virtualenv
+    $ sudo pip2.7 install virtualenv
     
 .. _creando_virtualenv:
 
@@ -157,5 +167,5 @@ De esta forma ya puedes realizar operaciones de shell fuera del entorno virtual.
 
   Cada ves que necesite salirse del entorno virtual necesita desactivar este mismo.
 
-.. _virtualenv: http://pypi.python.org/pypi/virtualenv/
-.. _esta disponible: http://packages.debian.org/wheesy/python2.7
+.. _virtualenv: https://pypi.python.org/pypi/virtualenv/
+.. _esta disponible: https://packages.debian.org/stretch/python2.7

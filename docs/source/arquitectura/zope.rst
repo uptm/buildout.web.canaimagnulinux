@@ -140,7 +140,7 @@ A continuación ejemplo de configuraciones buildout:
 
 .. code-block:: cfg
 
-    # For options see http://pypi.python.org/pypi/plone.recipe.zeoserver
+    # For options see https://pypi.python.org/pypi/plone.recipe.zeoserver
     [zeoserver]
     <= zeoserver_base
     recipe         = plone.recipe.zeoserver
@@ -188,7 +188,7 @@ separada:
 
     # Default settings for ZEO clients.
     # ZEO clients basic configurations.
-    # For options see http://pypi.python.org/pypi/plone.recipe.zope2instance
+    # For options see https://pypi.python.org/pypi/plone.recipe.zope2instance
     [client_base]
     # Common options
     eggs             = ${buildout:eggs}
@@ -371,7 +371,7 @@ Referencias
 
 -   `Buildout para instalar de todas las partes de un sitio`_.
 
-.. _Zope2: http://pypi.python.org/pypi/plone.recipe.zope2instance
-.. _plone.recipe.zope2instance: http://pypi.python.org/pypi/plone.recipe.zope2instance
-.. _collective.recipe.template: http://pypi.python.org/pypi/collective.recipe.template
-.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.org/en/latest/buildout/plone-esquema-alta-disponibilidad.html
+.. _Zope2: https://pypi.python.org/pypi/plone.recipe.zope2instance
+.. _plone.recipe.zope2instance: https://pypi.python.org/pypi/plone.recipe.zope2instance
+.. _collective.recipe.template: https://pypi.python.org/pypi/collective.recipe.template
+.. _Buildout para instalar de todas las partes de un sitio: http://plone-spanish-docs.readthedocs.io/es/latest/buildout/plone_esquema_alta_disponibilidad.html
