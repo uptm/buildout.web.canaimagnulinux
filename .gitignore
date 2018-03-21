@@ -27,6 +27,7 @@ develop-eggs/
 dist/
 downloads/
 eggs/
+etc/
 fake-eggs/
 htmlcov/
 include/
